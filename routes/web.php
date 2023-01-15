@@ -15,11 +15,9 @@ use App\Http\Controllers\IndicadoresController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/datos', "App\Http\Controllers\ObtenerDatos@index");
-
-Route::get('/indicadores','App\Http\Controllers\IndicadoresController@importarDatosApi');
+Route::get('/','App\Http\Controllers\IndicadoresController@importarDatosApi');
 
